@@ -1,0 +1,10 @@
+{{ define "main" }}
+<textarea id="source">
+{{ range $i,$p := .Pages.ByTitle }}
+    {{ if $i }}
+---
+    {{ end }}
+{{ $p.RawContent }}
+{{ end }}
+</textarea>
+{{ end }}

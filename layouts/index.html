@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="main">
+    <table>
+        <tr><td class="header" colspan="3">{{ .Site.Title }}</td></tr>
+        <tr><td class="title" colspan="3"></td></tr>
+        {{ range .Site.Sections }}
+        {{- partial "index/list.html" . -}}
+            {{ range .Sections }}
+            {{- partial "index/list.html" . -}}
+            {{ end }}
+        {{ end }}
+    </table>
+</div>
+{{ end }}

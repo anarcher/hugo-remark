@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "slide/head.html" . -}}
+    <body>
+        {{- partial "slide/header.html" . -}}
+        <div id="content">
+        {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "slide/footer.html" . -}}
+    </body>
+</html>

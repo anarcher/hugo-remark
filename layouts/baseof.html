@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <meta charset="UTF-8">
+</head>
+<body>
+    {{- partial "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "footer.html" . -}}
+</body>
+</html>
