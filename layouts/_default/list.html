@@ -1,6 +1,6 @@
 {{ define "main" }}
 <textarea id="source">
-{{ range $i,$p := .Pages.ByTitle }}
+{{ range $i,$p := sort .Pages "File.Path"   }}
     {{ if $i }}
 ---
     {{ end }}
