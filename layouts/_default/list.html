@@ -1,9 +1,7 @@
 {{ define "main" }}
 <textarea id="source">
-{{ range $i,$p := sort .Pages "File.Path"   }}
-    {{ if $i }}
----
-    {{ end }}
+{{- range $i,$p := sort .Pages "File.Path" -}}
+{{ if $i }}---{{ end }}
 {{ $p.RawContent }}
 {{ end }}
 </textarea>
