@@ -1,7 +1,5 @@
 {{ if eq .Params.Index true }}
-<tr>
-    <td><a href="{{ .Permalink }}">{{ .Title }}</a></td>
-    <td>{{ .Date.Format "2006-01-02" }}</td>
-    <td><p class="details">{{ .Params.Location  }}</p></td>
-</tr>
+<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<p class="date">{{ .Date.Format "Jan 2, 2006" }}</p>
+<p>{{ .Description }}</p>
 {{ end }}

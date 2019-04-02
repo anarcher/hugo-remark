@@ -1,14 +1,21 @@
 {{ define "main" }}
-<div class="main">
-    <table>
-        <tr><td class="header" colspan="3">{{ .Site.Title }}</td></tr>
-        <tr><td class="title" colspan="3"></td></tr>
-        {{ range .Site.Sections }}
+<header>
+    <div class="container">
+        <h1>{{.Site.Title}}</h1>
+        {{if (isset .Site.Params "description")}}
+            <p>{{.Site.Params.Description}}</p>
+            <p>Slides</p>
+        {{end}}
+    </div>
+</header>
+<section id="content">
+    {{ range .Site.Sections }}
+    <div class="container">
+    {{- partial "index/list.html" . -}}
+        {{ range .Sections }}
         {{- partial "index/list.html" . -}}
-            {{ range .Sections }}
-            {{- partial "index/list.html" . -}}
-            {{ end }}
         {{ end }}
-    </table>
-</div>
+    </div>
+    {{ end }}
+</section>
 {{ end }}

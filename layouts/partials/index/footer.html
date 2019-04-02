@@ -1,0 +1,8 @@
+<footer>
+    <p>{{.Site.Title}} &copy; {{ dateFormat "2006" now }}</p>
+    <ul class="links">
+    {{ range .Site.Param "links" }}
+    <li><a href="{{ .link }}" target="_blank">{{ .title }}</a></li>
+    {{end}}
+    </ul>
+</footer> 

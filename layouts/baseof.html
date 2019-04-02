@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}</title>
-  <link rel="stylesheet" href="/css/index.css">
-  <meta charset="UTF-8">
+    {{- partial "index/head.html" . -}}
 </head>
 <body>
-    {{- partial "header.html" . -}}
+    {{- partial "index/header.html" . -}}
     {{- block "main" . }}{{- end }}
-    {{- partial "footer.html" . -}}
+    {{- partial "index/footer.html" . -}}
 </body>
 </html>
