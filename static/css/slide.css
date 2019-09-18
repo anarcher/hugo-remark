@@ -194,3 +194,15 @@ td {
   padding: 0.1em 0.5em;
   background: #eee;
 }
+
+.pull-left {
+float: left;
+width: 47%;
+}
+.pull-right {
+float: right;
+width: 47%;
+}
+.pull-right ~ p {
+clear: both;
+}
